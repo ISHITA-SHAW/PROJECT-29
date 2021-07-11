@@ -7,9 +7,13 @@ class SlingShot{
             length: 20
         }
         this.pointB= pointB
-        this.sling=Constraint.create(options); World.add(world, this.sling);
+        this.sling=Constraint.create(options); 
+        World.add(world, this.sling);
     }
-
+       attach(body){
+           this.sling.bodyA = body;
+       }
+       
     fly(){
         this.sling.bodyA = null;
     }
@@ -24,4 +28,3 @@ class SlingShot{
         }
     }
 }
-© 2021 GitHub, Inc.
