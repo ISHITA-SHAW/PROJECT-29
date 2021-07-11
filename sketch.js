@@ -114,3 +114,8 @@ function draw() {
   image(polygon_img ,ball.position.x,ball.position.y,40,40);
 
 }
+function keyPressed(){
+  if(keyCode === 32){
+    slingShot.attach(this.ball);
+  }
+}
